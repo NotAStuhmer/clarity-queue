@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "types": ["jest", "@testing-library/jest-dom"],
+    "types": ["jest", "node"],
+    "typeRoots": ["./node_modules/@types", "./src/types", "./"],
     "target": "ES2016",
     "module": "ESNext",
     "strict": true,
@@ -13,5 +14,12 @@
     "outDir": "./dist",
     "rootDir": "./src"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/types",
+    "**/*.ts",
+    "**/*.tsx",
+    "./src/types/global.d.ts"
+  ],
+  "exclude": ["node_modules", "dist", "cypress", "./cypress.config.ts"]
 }
